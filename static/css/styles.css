@@ -1,0 +1,168 @@
+/* Minimal BookFinder Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Book card styling */
+.book-card {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgb(229 231 235);
+}
+
+.dark .book-card {
+  background: rgb(17 24 39);
+  border-color: rgb(55 65 81);
+}
+
+.book-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .book-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.book-image {
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.book-card:hover .book-image {
+  transform: scale(1.02);
+}
+
+/* Search suggestions */
+.search-suggestion {
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  border-bottom: 1px solid rgb(243 244 246);
+}
+
+.dark .search-suggestion {
+  border-bottom-color: rgb(55 65 81);
+}
+
+.search-suggestion:hover {
+  background-color: rgb(249 250 251);
+}
+
+.dark .search-suggestion:hover {
+  background-color: rgb(31 41 55);
+}
+
+/* History items */
+.history-item {
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.15s ease;
+}
+
+.history-item:hover {
+  background-color: rgb(249 250 251);
+}
+
+.dark .history-item:hover {
+  background-color: rgb(31 41 55);
+}
+
+/* Toast notifications */
+.toast {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0.5rem;
+  animation: slideInRight 0.3s ease-out;
+}
+
+.toast.success { background-color: rgb(34 197 94); }
+.toast.error { background-color: rgb(239 68 68); }
+.toast.info { background-color: rgb(59 130 246); }
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(209 213 219);
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgb(75 85 99);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(156 163 175);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgb(107 114 128);
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Utility classes */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
