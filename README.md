@@ -1,7 +1,8 @@
 # 📚 BookMatch - Find your next favorite book
 
 <div align="center">
-  <img src="static/images/logo_light.svg" alt="BookMatch Logo" width="200"> <br/><br/>
+  <br/>
+  <img src="static/images/logo_dark.svg" alt="BookMatch Logo" width="250"> <br/><br/>
   
   **An AI-powered book recommendation system that helps you discover your next great read based on collaborative filtering and machine learning.**
   
