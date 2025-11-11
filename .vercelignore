@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+notebook.ipynb
+*.ipynb
+
+# Data files (large CSV files - NOT needed for production)
+data/
+data/*.csv
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+README.md
+LICENSE
+
+# Logs
+*.log
+
+# Cache
+.cache/
+*.cache
+
+# api/index.py is not needed anymore since we use app.py directly
+api/
+
+# Keep models/ directory - it's needed for the app to work

@@ -106,7 +106,6 @@ def search_books():
     filtered_books = [book for book in book_names if query in book.lower()]
     filtered_books = filtered_books[:20]
 
-    # Get book details for each result
     results = []
     for book in filtered_books:
         book_details = get_book_details(book)
@@ -162,7 +161,6 @@ def get_book_info():
 def get_popular_books():
     """Get random books for homepage showcase (18 random books each time)"""
     try:
-        # Get 18 random books from the available books
         random_books = random.sample(list(book_names), min(18, len(book_names)))
         popular = []
 
